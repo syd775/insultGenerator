@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(52, 26, 81);
+    color: rgb(235, 235, 235);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    margin:0;
+}
+
+header {
+    background-color: rgb(24, 12, 37);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+
+.insult {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 3rem 6rem 3rem;
+}
+
+.word {
+    background-color: rgb(31, 15, 51);
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .25rem rgb(13, 6, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(24, 12, 37);
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: .5rem .5rem .25rem rgb(13, 6, 20);
+    color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+button:active {
+    background: rgb(24, 12, 37);
+    -webkit-box-shadow: inset 0px 0px 5px rgb(15, 7, 22);
+       -moz-box-shadow: inset 0px 0px 5px rgb(15, 7, 22);
+            box-shadow: inset 0px 0px 5px rgb(15, 7, 22);
+
+    box-shadow: .25rem .25rem .13rem rgb(13, 6, 20);
+     outline: none;
+  }
+
+/* Classes for animation */
+.fadeOut {
+    animation: fadeOut .5s linear forwards;
+    opacity: 1;
+}
+
+@keyframes fadeOut {
+    0% {
+        
+    }
+   
+    100% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+.fadeIn {
+    position: relative;
+    top: -1rem;
+    opacity: 0;
+    animation: fadeIn .5s linear forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* media queries */
+@media (max-width:700px) {
+    header h2{
+        font-size: 95%;
+    }
+    .insult {
+        font-size: 90%;
+        width: 90vw;
+        justify-content: space-between;
+        
+    }
+}
+
+@media (max-width:600px) {
+    header h2{
+        font-size: 95%;
+    }
+    .insult {
+        font-size: 90%;
+        flex-direction: column;
+        width: 75rem;
+    }
+}
+
